@@ -1,0 +1,163 @@
+.outerDiv{
+    width:99vw;
+    height:87vh;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    background-color:#E2E2E2;
+}
+.employeeDiv{
+    //border:2px solid blue;
+    background-color:#FFFFFF;
+    width:50vw;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 40px;
+}
+.employee{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  
+}
+.heading{
+top: 175px;
+left: 546px;
+width: 290px;
+height: 37px;
+text-align: left;
+font: normal normal bold 28px/37px Roboto;
+letter-spacing: 0px;
+color: #42515F;
+text-transform: capitalize;
+opacity: 1;
+margin-bottom: 10px;
+}
+.row-content{
+    display: flex;
+}
+.labelText {
+    font: normal normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #42515F;
+    opacity: 1;
+    padding: 12px 0px 12px 0px;
+    width: 20vw;
+}
+.input {
+    width: 70vw;
+    height: 8px;
+    padding: 12px;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 5px;
+}
+.profile-radio-content {
+    display: flex;
+    flex-direction: row;
+    //flex-wrap: wrap;
+    width: 73vw;
+}
+.profile-radio-content>label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+.text{
+    width: 40px;
+    margin-left: 12px;
+    font: normal normal normal 18px/24px Roboto;
+    color: #42515F;
+    opacity: 1;
+}
+.checkbox{
+    margin-right: 15px;
+    font: normal normal normal 18px/24px Roboto;
+    color: #42515F;
+    opacity: 1;
+}
+
+.dropdown-select{
+    width: 270px;
+    height:35px;
+    border-radius: 4px;
+    border:1px solid #BDBDBD ;
+    margin-top: 5px;
+    font: normal normal normal 18px/24px Roboto;
+    color: #42515F;
+    opacity: 1;
+  }
+  .dropdown-select1{
+    width: 130px;
+    height:35px;
+    border-radius: 4px;
+    border:1px solid #BDBDBD ;
+    margin-top: 5px;
+    margin-right: 10px;
+    font: normal normal normal 18px/24px Roboto;
+    color: #42515F;
+    opacity: 1;
+  }
+  .input1 {
+    width: 70vw;
+    height:50px;
+    padding: 12px;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.buttonParent {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    font-size: 20px;
+    font-family: Roboto;
+    color: #42515f;
+    opacity: 1;
+    background-color: #E2E2E2;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    font-weight: 400;
+    width: 140px;
+    padding: 7px 7px;
+    cursor: pointer;
+}
+
+.submitButton {
+    margin-right: 30px;
+}
+
+.resetButton {
+    margin-right: 10px;
+}
+
+.cancelButton:hover {
+    background: grey;
+    color: white;
+}
+
+.submitButton:hover {
+    background-color: #82A70C;
+    color: white;
+}
+
+.resetButton:hover {
+    background: grey;
+    color: white;
+}
+
