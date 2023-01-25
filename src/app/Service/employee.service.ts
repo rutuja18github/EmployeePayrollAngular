@@ -10,4 +10,8 @@ export class EmployeeService {
   addEmployee(data:any){
        return this.httpClient.post('http://localhost:3000/employee',data)
   }
+  getEmployees(){
+    return this.httpClient.get('http://localhost:3000/employee')
+}
+
 }

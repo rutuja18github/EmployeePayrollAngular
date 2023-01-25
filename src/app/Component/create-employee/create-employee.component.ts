@@ -30,7 +30,6 @@ export class CreateEmployeeComponent implements OnInit {
      })
   }
   submit(){
-        console.log(this.employeeForm.value)
         let data={
           name:this.employeeForm.value.name,
           gender:this.employeeForm.value.gender,

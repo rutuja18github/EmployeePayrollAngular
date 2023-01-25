@@ -1,1 +1,42 @@
-<p>dashboard works!</p>
+<div class="main-content">
+    <div class="heading">
+        <div class="heading-text">
+            Employee Details 
+        </div>
+        <button class="addEmployee">
+            <img src="" alt="">+ Add User
+        </button>
+    </div>
+    <!-- Table -->
+    <div class="table-main">
+        <table id="display" class="table"> 
+            <!-- Table Headings -->
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>department</th>
+                <th>salary</th>
+                <th>Start Date</th>
+                <th>Actions</th>
+            </tr>
+            
+            <tr *ngFor="let employee of employeeDetails">
+                <td><img class="profile" [src]="employee.profile" alt=""></td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.gender}}</td>
+                <td>
+                    <div class="departmentDiv" *ngFor="let departmentName of employee.department">
+                        {{departmentName}}
+                    </div> 
+                </td>
+                <td>{{employee.salary}}</td>
+                <td>{{employee.startDate}}</td>
+                <td>
+                    <img id="" class="deletImg" src="../../assets/delete-black.svg" alt="delete">
+                    <img id="" src="../../assets/edit.svg" >   
+                </td>
+            </tr>
+        </table>
+    </div>
+</div> 

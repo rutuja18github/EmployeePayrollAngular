@@ -26,6 +26,35 @@
       "salary": "60000",
       "notes": "Java Programming",
       "id": 4
+    },
+    {
+      "name": "Shital Sunil Salunkhe",
+      "gender": "Female",
+      "department": [
+        "Finance",
+        "Engineer",
+        "HR",
+        "Other"
+      ],
+      "profile": "../assets/profile4.jpg",
+      "startDate": "13 March 2019",
+      "salary": "30000",
+      "notes": "I am an Developer",
+      "id": 5
+    },
+    {
+      "name": "Abimanyu Abhishekrao Salunkhe",
+      "gender": "Male",
+      "department": [
+        "Engineer",
+        "Finance",
+        "Sales"
+      ],
+      "profile": "../assets/profile3.jpg",
+      "startDate": "13 Sept 2017",
+      "salary": "60000",
+      "notes": "I am a tester",
+      "id": 6
     }
   ]
 }
