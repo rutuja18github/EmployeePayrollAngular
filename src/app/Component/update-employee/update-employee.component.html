@@ -1,0 +1,148 @@
+
+<div class="mainDiv">
+    <!-- Employee Payroll  -->
+            <div class="heading">Employee Payroll Form</div>
+            <!-- Name -->
+            <div class="rowDiv">
+                <label class="label" for="name">Name </label>
+                <input class="inputBox" type="text" id="name" name="name" [(ngModel)]="name" required/>
+                <!-- <small class="error" *ngIf="employeeForm.controls['name'].invalid && (employeeForm.controls['name'].dirty || employeeForm.controls['name'].touched)">enter valid name</small> -->
+            </div>
+            <!-- Profile Pic -->
+            <div class="rowDiv">
+                <label class="label" for="profile">Profile image</label>
+                <div class="profileRadio">
+                    <label>
+                        <input type="radio" value="../assets/profile1.png" id="profile1" name="profileImage" [(ngModel)]="profile" required>
+                        <img class="profile" id='image1' src="../assets/profile1.png">
+                    </label>
+                    <label>
+                        <input type="radio" value="../assets/profile2.png"  id="profile2" name="profileImage" [(ngModel)]="profile"  required>
+                        <img class="profile" id='image2' src="../assets/profile2.png">
+                    </label>
+                    <label>
+                        <input type="radio" value="../assets/profile3.png" id="profile3" name="profileImage" [(ngModel)]="profile" required>
+                        <img class="profile" id='image3' src="../assets/profile3.png">
+                    </label>
+                    <label>
+                        <input type="radio" value="../assets/profile4.png"  id="profile4" [(ngModel)]="profile" required>
+                        <img class="profile" id='image4' src="../assets/profile4.png">
+                    </label>
+                </div>
+            </div>
+            <!-- Gender -->
+            <div class="rowDiv">
+                <label class="label" for="gender">Gender</label>
+                <div>
+                    <input type="radio"  name="gender"  id="Male" [(ngModel)]="gender" value="Male">
+                    <label class="radioLabel" for="Male">Male</label>
+                    <input type="radio"  name="gender" id="Female" [(ngModel)]="gender" value="Female">
+                    <label class="radioLabel" for="Female">Female</label>
+                </div>
+            </div>
+            <!-- Department -->
+            <div class="rowDiv">
+                <label class="label" for="department">Department</label>
+                <div *ngFor="let departmentName of departments,let i = index ">
+                    <label class="check" for="{{departmentName}}">
+                        <input type="checkbox" (change)="onChange($event)" name="department{{i}}" id="department{{i}}" value="{{departmentName}}">
+                        {{departmentName}}
+                    </label> 
+                </div>
+            </div>
+
+            <!-- Salary -->
+            <div class="rowDiv">
+                <label class="label" for="salary">Choose your salary</label>
+                <select class="dropdown-select" name="salary" id="salary" [(ngModel)]="salary">
+                    <option value="" disabled selected>Select Salary</option>
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="30000">30000</option>
+                    <option value="40000">40000</option>
+                    <option value="50000">50000</option>
+                    <option value="60000">60000</option>
+                    <option value="70000">70000</option>
+                    <option value="80000">80000</option>
+                    <option value="90000">90000</option>
+                    <option value="100000">100000</option>
+                </select>
+            </div>
+
+            <!-- Start date -->
+            <div class="rowDiv">
+                <label class="label" for="startDate"> Start Date </label>
+                <select id="day" name="date"  class="dropdown-select1" [(ngModel)]="date">
+                    <option value="" disabled selected>Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select id="month" name="month" class="dropdown-select1" [(ngModel)]="month">
+                    <option value="" disabled selected>Month</option>
+                    <option value="Jan">January</option>
+                    <option value="Feb">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Aug">August</option>
+                    <option value="Sept">September</option>
+                    <option value="Oct">October</option>
+                    <option value="Nov">November</option>
+                    <option value="Dec">December</option>
+                </select>
+                <select id="year" name="year" class="dropdown-select1" [(ngModel)]="year">
+                    <option value="" disabled selected>Year</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                </select>
+            </div>
+
+            
+            <!-- Note -->
+            <div class="rowDiv">
+                <label class="label" for="notes">Notes</label>
+                <textarea id="notes" [(ngModel)]="notes" class="inputBox" name="Notes" placeholder="" style="height: 70px;"></textarea>
+            </div>
+            <!-- Buttons -->
+            <div class="buttonParent">
+                <button  class="button cancelButton" (click)="cancle()">Cancel</button>
+                <button type="submit" class="button submitButton" id="submitButton" (click)="submit()" >Update</button>
+            </div>
+    <!-- </div> -->
+</div>

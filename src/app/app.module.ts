@@ -7,7 +7,9 @@ import { CreateEmployeeComponent } from './Component/create-employee/create-empl
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './Component/header/header.component';
-
+import { UpdateEmployeeComponent } from './Component/update-employee/update-employee.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { HeaderComponent } from './Component/header/header.component';
     CreateEmployeeComponent,
     DashboardComponent,
     HeaderComponent,
+    UpdateEmployeeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

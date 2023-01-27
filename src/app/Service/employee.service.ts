@@ -12,8 +12,11 @@ export class EmployeeService {
   }
   getEmployees(){
     return this.httpClient.get(this.url)
-}
-deleteEmployee(id:any){
-  return this.httpClient.delete(this.url +'/'+ id)
-}
+  }
+  deleteEmployee(id:any){
+     return this.httpClient.delete(this.url +'/'+ id)
+   }
+   updateEmployee(data:any){
+    return this.httpClient.put(this.url +'/'+ `${data.id}`,data)
+  }
 }

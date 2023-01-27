@@ -9,10 +9,10 @@ import { EmployeeService } from 'src/app/Service/employee.service';
   styleUrls: ['./create-employee.component.scss']
 })
 export class CreateEmployeeComponent implements OnInit {
-  profileImage1="../assets/profile1.jpg";
-  profileImage2="../assets/profile2.jpg";
-  profileImage3="../assets/profile3.jpg";
-  profileImage4="../assets/profile4.jpg";
+  // profileImage1="../assets/profile1.jpg";
+  // profileImage2="../assets/profile2.jpg";
+  // profileImage3="../assets/profile3.jpg";
+  // profileImage4="../assets/profile4.jpg";
   departments: any = ["HR", "Sales", "Engineer", "Finance", "Other"];
   employeeForm !:FormGroup
   constructor(private formBuilder:FormBuilder,private employeeService: EmployeeService,private router:Router){}
@@ -30,20 +30,29 @@ export class CreateEmployeeComponent implements OnInit {
 
      })
   }
-  submit(){
-        let data={
-          name:this.employeeForm.value.name,
-          gender:this.employeeForm.value.gender,
-          department:this.employeeForm.value.department,
-          profile:this.employeeForm.value.profileImage,
-          startDate:this.employeeForm.value.date +' '+this.employeeForm.value.month + ' '+this.employeeForm.value.year ,
-          salary:this.employeeForm.value.salary,
-          notes:this.employeeForm.value.note,
-        }
-        this.employeeService.addEmployee(data).subscribe((response)=>{
-          console.log('Employee Added Successfully',response)
-        })
+  get f(){
+    return this.employeeForm.controls;
   }
+  submit(){
+    if(this.employeeForm.invalid){
+        return
+    }
+      let data={
+        name:this.employeeForm.value.name,
+        gender:this.employeeForm.value.gender,
+        department:this.employeeForm.value.department,
+        profile:this.employeeForm.value.profileImage,
+        startDate:this.employeeForm.value.date +' '+this.employeeForm.value.month + ' '+this.employeeForm.value.year ,
+        salary:this.employeeForm.value.salary,
+        notes:this.employeeForm.value.note,
+      }
+      this.employeeService.addEmployee(data).subscribe((response)=>{
+        console.log('Employee Added Successfully',response)
+      })
+        
+  }
+
+  
   onChange(event:any){
     const checkedValue=event.target.value
     const checked=event.target.checked

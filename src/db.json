@@ -1,17 +1,17 @@
 {
   "employee": [
     {
-      "name": "Chetan Patil",
+      "name": "Chetan Machchhindra Patill",
       "gender": "Male",
       "department": [
-        "Sales",
         "Engineer",
-        "Other"
+        "Sales",
+        "Finance"
       ],
-      "profile": "../assets/profile1.jpg",
-      "startDate": "16 Nov 2018",
-      "salary": "50000",
-      "notes": "JavaScript",
+      "profile": "../assets/profile3.png",
+      "startDate": "14 June 2022",
+      "salary": "60000",
+      "notes": "JavaScript11",
       "id": 3
     },
     {
@@ -23,9 +23,9 @@
         "HR",
         "Other"
       ],
-      "profile": "../assets/profile4.jpg",
+      "profile": "../assets/profile4.png",
       "startDate": "13 March 2019",
-      "salary": "30000",
+      "salary": "40000",
       "notes": "I am an Developer",
       "id": 5
     },
@@ -37,9 +37,9 @@
         "Finance",
         "Sales"
       ],
-      "profile": "../assets/profile3.jpg",
+      "profile": "../assets/profile3.png",
       "startDate": "13 Sept 2017",
-      "salary": "60000",
+      "salary": "50000",
       "notes": "I am a tester",
       "id": 6
     }

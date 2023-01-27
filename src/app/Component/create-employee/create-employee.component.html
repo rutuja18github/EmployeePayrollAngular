@@ -8,27 +8,28 @@
             <!-- Name -->
             <div class="rowDiv">
                 <label class="label" for="name">Name </label>
-                <input class="inputBox"  type="text" id="name"  formControlName="name" name="name"  required/>
+                <input class="inputBox" type="text" id="name"  formControlName="name" name="name" [class.is-invalid]="f['name'].invalid" required/>
+                <!-- <small class="error" *ngIf="employeeForm.controls['name'].invalid && (employeeForm.controls['name'].dirty || employeeForm.controls['name'].touched)">enter valid name</small> -->
             </div>
             <!-- Profile Pic -->
             <div class="rowDiv">
                 <label class="label" for="profile">Profile image</label>
-                <div class="profile-radio-content">
+                <div class="profileRadio">
                     <label>
-                        <input type="radio" value="../assets/profile1.jpg" id="profile1" name="profileImage" formControlName="profileImage" required>
-                        <img class="profile" id='image1' src="../assets/profile1.jpg">
+                        <input type="radio" value="../assets/profile1.png" id="profile1" name="profileImage" formControlName="profileImage" required>
+                        <img class="profile" id='image1' src="../assets/profile1.png">
                     </label>
                     <label>
-                        <input type="radio" value="../assets/profile2.jpg"  id="profile2" name="profileImage" formControlName="profileImage"   required>
-                        <img class="profile" id='image2' src="../assets/profile2.jpg">
+                        <input type="radio" value="../assets/profile2.png"  id="profile2" name="profileImage" formControlName="profileImage"   required>
+                        <img class="profile" id='image2' src="../assets/profile2.png">
                     </label>
                     <label>
-                        <input type="radio" value="../assets/profile3.jpg" id="profile3" name="profileImage" formControlName="profileImage"   required>
-                        <img class="profile" id='image3' src="../assets/profile3.jpg">
+                        <input type="radio" value="../assets/profile3.png" id="profile3" name="profileImage" formControlName="profileImage"   required>
+                        <img class="profile" id='image3' src="../assets/profile3.png">
                     </label>
                     <label>
-                        <input type="radio" value="../assets/profile4.jpg"  id="profile4"  formControlName="profileImage"  required>
-                        <img class="profile" id='image4' src="../assets/profile4.jpg">
+                        <input type="radio" value="../assets/profile4.png"  id="profile4"  formControlName="profileImage"  required>
+                        <img class="profile" id='image4' src="../assets/profile4.png">
                     </label>
                 </div>
             </div>
