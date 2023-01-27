@@ -15,8 +15,13 @@ export class DashboardComponent implements OnInit {
   getAllEmployee(){
     this.employeeService.getEmployees().subscribe((response:any)=>{
         this.employeeDetails=response
-        console.log(this.employeeDetails)
+        console.log('Employees fetch successfully',response)
     })
   }
-
+  delete(id:any){
+    this.employeeService.deleteEmployee(id).subscribe((response)=>{
+        console.log('employee delete successfully',response)
+    })
+    this.getAllEmployee()
+  }
 }

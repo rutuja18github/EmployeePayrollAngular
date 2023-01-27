@@ -33,7 +33,7 @@
                 <td>{{employee.salary}}</td>
                 <td>{{employee.startDate}}</td>
                 <td>
-                    <img id="" class="deletImg" src="../../assets/delete-black.svg" alt="delete">
+                    <img id="" class="deletImg" (click)="delete(employee.id)" src="../../assets/delete-black.svg" alt="delete">
                     <img id="" src="../../assets/edit.svg" >   
                 </td>
             </tr>

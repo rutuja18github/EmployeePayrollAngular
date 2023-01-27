@@ -5,13 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EmployeeService {
-
+  url = 'http://localhost:3000/employee'
   constructor(private httpClient:HttpClient) { }
   addEmployee(data:any){
-       return this.httpClient.post('http://localhost:3000/employee',data)
+       return this.httpClient.post(this.url,data)
   }
   getEmployees(){
-    return this.httpClient.get('http://localhost:3000/employee')
+    return this.httpClient.get(this.url)
 }
-
+deleteEmployee(id:any){
+  return this.httpClient.delete(this.url +'/'+ id)
+}
 }

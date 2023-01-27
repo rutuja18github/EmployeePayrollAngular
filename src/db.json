@@ -15,19 +15,6 @@
       "id": 3
     },
     {
-      "name": "Rutuja",
-      "gender": "Female",
-      "department": [
-        "Engineer",
-        "HR"
-      ],
-      "profile": "../assets/profile2.jpg",
-      "startDate": "14 June 2019",
-      "salary": "60000",
-      "notes": "Java Programming",
-      "id": 4
-    },
-    {
       "name": "Shital Sunil Salunkhe",
       "gender": "Female",
       "department": [
