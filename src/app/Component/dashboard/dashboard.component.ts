@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/Service/employee.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { EmployeeService } from 'src/app/Service/employee.service';
 })
 export class DashboardComponent implements OnInit {
    employeeDetails:any
-  constructor(private employeeService:EmployeeService){}
+  constructor(private employeeService:EmployeeService,private router:Router){}
   ngOnInit(): void {
     this.getAllEmployee()
   }

@@ -4,8 +4,10 @@ import { CreateEmployeeComponent } from './Component/create-employee/create-empl
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path:'addEmployee',component:CreateEmployeeComponent},
-  {path:'dashboard',component:DashboardComponent}
+  {path:'',redirectTo:'/dashboard',pathMatch:'full'},
+  {path:'dashboard',component:DashboardComponent},
+  {path:'addEmployee',component:CreateEmployeeComponent}
+  
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { EmployeeService } from 'src/app/Service/employee.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class CreateEmployeeComponent implements OnInit {
   profileImage4="../assets/profile4.jpg";
   departments: any = ["HR", "Sales", "Engineer", "Finance", "Other"];
   employeeForm !:FormGroup
-  constructor(private formBuilder:FormBuilder,private employeeService: EmployeeService){}
+  constructor(private formBuilder:FormBuilder,private employeeService: EmployeeService,private router:Router){}
   ngOnInit(): void {
      this.employeeForm=this.formBuilder.group({
       name:['',Validators.required],
@@ -61,4 +62,8 @@ export class CreateEmployeeComponent implements OnInit {
        i++
     }
   }
+  cancle(){
+    this.router.navigate(["dashboard"]);
+  }
+
 }
